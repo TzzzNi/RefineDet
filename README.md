@@ -159,3 +159,9 @@ We have provided the models that are trained from different datasets. To help re
    * trainval35k (ResNet101): [RefineDet320](https://drive.google.com/open?id=1yrCfPIyKNsD9aBnn5iooFoX414FzXvzH), [RefineDet512](https://drive.google.com/open?id=1KWdfrowNIJqJF0j-ZxkQpkbAcPPbwAS1)
 
 _Note: If you can not download our pre-trained models through the above links, you can download them through [BaiduYun](http://pan.baidu.com/s/1gf8J7Yr)._
+
+比较置信因子:
+python test/refinedet_demo.py --model_id 2 --save_fig --img_list /home/nt/PycharmProjects/transdata/test_data.txt --threshold 0.1
+
+测试时间:
+./build/examples/refinedet/refineDet_detect --out_dir results/VOC0712/SSD_512x512_coco_0.2/ --confidence_threshold 0.2 models/VGGNet/VOC0712/refinedet_vgg16_512x512_coco/deploy.prototxt models/VGGNet/VOC0712/refinedet_vgg16_512x512_coco/coco_refinedet_vgg16_512x512.caffemodel /home/nt/PycharmProjects/transdata/test_data.txt
